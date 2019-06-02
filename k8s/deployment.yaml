@@ -1,17 +1,16 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: taxicab-ENVIRONMENT-BUILD_NUMBER
+  name: taxicab
 spec:
   replicas: 1
   template:
     metadata:
       labels:
         app: taxicab
-        version: "BUILD_NUMBER"
     spec:
       containers:
-      - name: taxicab-ENVIRONMENT-BUILD_NUMBER
+      - name: taxicab
         image: IMAGE
         imagePullPolicy: IfNotPresent
         ports:
